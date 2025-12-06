@@ -1,5 +1,55 @@
-<h1>On est quoi?</h1>
-<p>Bienvenue sur "On Est Quoi", une plateforme dédiée à la découverte et à l'exploration du type de relation que vous avez avec une tierce personne. Que vous soyez des amis, un couple ou dans une situation incertaine, vous êtes au bon endroit.</p>
-<p>Notre objectif est de vous aider à clarifier et à comprendre la nature de votre relation à travers une série de questions simples et intuitives. En répondant honnêtement, vous pourrez obtenir des insights précieux sur votre dynamique relationnelle.</p>
-<p>Commencez dès maintenant en cliquant sur le bouton ci-dessous pour découvrir "On Est Quoi" entre vous deux!</p>
-<button mat-raised-button color="primary" routerLink="/questionnaire">Commencer le questionnaire</button>
+<section class="hero">
+  <div class="hero-content">
+    <h1>On est quoi?</h1>
+    <p class="subtitle">Découvrez la nature de votre relation</p>
+    <p class="hero-description">Une plateforme dédiée à l'exploration et à la clarification des relations.<br>Amis, couple ou situation incertaine?<br>Nous vous aidons à comprendre votre dynamique.</p>
+    <button mat-raised-button color="primary" routerLink="/questionnaire" class="cta-button">Commencer le questionnaire</button>
+  </div>
+</section>
+
+<section class="features">
+  <div class="features-container">
+    <div class="feature-card">
+      <div class="feature-image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#e11d48" stroke-width="2">
+          <circle cx="50" cy="30" r="15"/>
+          <path d="M50 50 L50 75 M35 60 L65 60 M35 75 L65 75"/>
+        </svg>
+      </div>
+      <h3>Questions Intuitives</h3>
+      <p>Des questions simples et reflétées, conçues pour vous aider à explorer votre relation en profondeur.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#e11d48" stroke-width="2">
+          <path d="M20 50 Q50 20 80 50 Q50 80 20 50"/>
+          <circle cx="50" cy="50" r="8" fill="#e11d48"/>
+        </svg>
+      </div>
+      <h3>Insights Précieux</h3>
+      <p>Obtenez des retours détaillés et honnêtes sur la dynamique de votre relation.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#e11d48" stroke-width="2">
+          <rect x="20" y="20" width="30" height="40" rx="3"/>
+          <rect x="55" y="30" width="30" height="40" rx="3"/>
+          <line x1="35" y1="25" x2="35" y2="35"/>
+          <line x1="70" y1="35" x2="70" y2="45"/>
+        </svg>
+      </div>
+      <h3>Clarification Rapide</h3>
+      <p>Comprenez où vous en êtes rapidement, sans complications. Idéal pour les couples comme les amis.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Prêt à découvrir?</h2>
+    <p>Répondez honnêtement et découvrez des insights uniques sur votre relation.</p>
+    <button mat-raised-button color="primary" routerLink="/questionnaire" class="cta-button-large">Démarrer maintenant</button>
+  </div>
+</section>
