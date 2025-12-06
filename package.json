@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration development --localize=fr",
     "test": "ng test",
+    "i18n": "ng extract-i18n --output-path src/locale",
     "serve:ssr:on-est-quoi": "node dist/on-est-quoi/server/server.mjs"
   },
   "prettier": {
@@ -42,6 +43,7 @@
     "@angular/build": "^21.0.2",
     "@angular/cli": "^21.0.2",
     "@angular/compiler-cli": "^21.0.0",
+    "@angular/localize": "^21.0.3",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
     "jsdom": "^27.1.0",

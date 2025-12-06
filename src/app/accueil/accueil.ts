@@ -8,6 +8,4 @@ import { RouterLink } from '@angular/router';
   templateUrl: './accueil.html',
   styleUrl: './accueil.scss'
 })
-export class Accueil {
-
-}
+export class Accueil {}

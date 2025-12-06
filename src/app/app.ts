@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { I18nService } from './services/i18n.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('on-est-quoi');
+  i18n = inject(I18nService);
+
+  toggleLanguage(): void {
+    const currentLang = this.i18n.getCurrentLanguage();
+    this.i18n.setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+  }
 }

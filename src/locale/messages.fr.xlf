@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="on_est_quoi" datatype="html">
+        <source>What are we?</source>
+        <target>On est quoi?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="discover_relationship" datatype="html">
+        <source>Discover the nature of your relationship</source>
+        <target>Découvrez la nature de votre relation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero_description" datatype="html">
+        <source>A platform dedicated to exploring and clarifying relationships. Friends, couple, or uncertain situation? We help you understand your dynamic.</source>
+        <target>Une plateforme dédiée à l'exploration et à la clarification des relations. Amis, couple ou situation incertaine? Nous vous aidons à comprendre votre dynamique.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="start_questionnaire" datatype="html">
+        <source>Start the questionnaire</source>
+        <target>Commencer le questionnaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="intuitive_questions" datatype="html">
+        <source>Intuitive Questions</source>
+        <target>Questions Intuitives</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="intuitive_description" datatype="html">
+        <source>Simple and thoughtful questions, designed to help you explore your relationship in depth.</source>
+        <target>Des questions simples et reflétées, conçues pour vous aider à explorer votre relation en profondeur.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="valuable_insights" datatype="html">
+        <source>Valuable Insights</source>
+        <target>Insights Précieux</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="insights_description" datatype="html">
+        <source>Get detailed and honest feedback on the dynamics of your relationship.</source>
+        <target>Obtenez des retours détaillés et honnêtes sur la dynamique de votre relation.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="quick_clarification" datatype="html">
+        <source>Quick Clarification</source>
+        <target>Clarification Rapide</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="clarification_description" datatype="html">
+        <source>Understand where you stand quickly, without complications. Perfect for couples and friends alike.</source>
+        <target>Comprenez où vous en êtes rapidement, sans complications. Idéal pour les couples comme les amis.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ready_to_discover" datatype="html">
+        <source>Ready to discover?</source>
+        <target>Prêt à découvrir?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta_description" datatype="html">
+        <source>Answer honestly and discover unique insights about your relationship.</source>
+        <target>Répondez honnêtement et découvrez des insights uniques sur votre relation.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="start_now" datatype="html">
+        <source>Start now</source>
+        <target>Démarrer maintenant</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="on_est_quoi" datatype="html">
+        <source>What are we?</source>
+      </trans-unit>
+      <trans-unit id="discover_relationship" datatype="html">
+        <source>Discover the nature of your relationship</source>
+      </trans-unit>
+      <trans-unit id="hero_description" datatype="html">
+        <source>A platform dedicated to exploring and clarifying relationships. Friends, couple, or uncertain situation? We help you understand your dynamic.</source>
+      </trans-unit>
+      <trans-unit id="start_questionnaire" datatype="html">
+        <source>Start the questionnaire</source>
+      </trans-unit>
+      <trans-unit id="intuitive_questions" datatype="html">
+        <source>Intuitive Questions</source>
+      </trans-unit>
+      <trans-unit id="intuitive_description" datatype="html">
+        <source>Simple and thoughtful questions, designed to help you explore your relationship in depth.</source>
+      </trans-unit>
+      <trans-unit id="valuable_insights" datatype="html">
+        <source>Valuable Insights</source>
+      </trans-unit>
+      <trans-unit id="insights_description" datatype="html">
+        <source>Get detailed and honest feedback on the dynamics of your relationship.</source>
+      </trans-unit>
+      <trans-unit id="quick_clarification" datatype="html">
+        <source>Quick Clarification</source>
+      </trans-unit>
+      <trans-unit id="clarification_description" datatype="html">
+        <source>Understand where you stand quickly, without complications. Perfect for couples and friends alike.</source>
+      </trans-unit>
+      <trans-unit id="ready_to_discover" datatype="html">
+        <source>Ready to discover?</source>
+      </trans-unit>
+      <trans-unit id="cta_description" datatype="html">
+        <source>Answer honestly and discover unique insights about your relationship.</source>
+      </trans-unit>
+      <trans-unit id="start_now" datatype="html">
+        <source>Start now</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

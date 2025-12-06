@@ -1,6 +1,11 @@
 <header class="site-header">
 	<div class="container">
-    <h1>On Est Quoi</h1>
+    <h1 i18n="@@on_est_quoi">What are we?</h1>
+    <div class="language-toggle">
+      <button mat-icon-button (click)="toggleLanguage()" class="lang-button">
+        {{ i18n.getCurrentLanguage() === 'fr' ? 'EN' : 'FR' }}
+      </button>
+    </div>
 	</div>
 </header>
 
