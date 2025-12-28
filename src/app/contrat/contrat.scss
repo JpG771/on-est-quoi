@@ -1,0 +1,80 @@
+.category-div {
+  min-height: 50px;
+}
+
+.drop-zone {
+  min-height: 50px;
+}
+
+// Specific styles for each category
+.choices {
+  border: 1px solid var(--color-red);
+
+  .category-header {
+    background-color: var(--color-red);
+  }
+
+  .drop-zone {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+}
+
+.favorite {
+  border: 1px solid #ff69b4;
+
+  .category-header {
+    background-color: #ff69b4;
+  }
+
+  .drop-zone {
+    background-color: rgba(255, 105, 180, 0.1);
+  }
+}
+
+.love {
+  border: 1px solid #ffb6c1;
+
+  .category-header {
+    background-color: #ffb6c1;
+  }
+
+  .drop-zone {
+    background-color: rgba(255, 182, 193, 0.1);
+  }
+}
+
+.like {
+  border: 1px solid #ffff00;
+
+  .category-header {
+    background-color: #ffff00;
+  }
+
+  .drop-zone {
+    background-color: rgba(255, 255, 0, 0.1);
+  }
+}
+
+.rarely {
+  border: 1px solid #32cd32;
+
+  .category-header {
+    background-color: #32cd32;
+  }
+
+  .drop-zone {
+    background-color: rgba(50, 205, 50, 0.1);
+  }
+}
+
+.never {
+  border: 1px solid #808080;
+
+  .category-header {
+    background-color: #808080;
+  }
+
+  .drop-zone {
+    background-color: rgba(128, 128, 128, 0.1);
+  }
+}
