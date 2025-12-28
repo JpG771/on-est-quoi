@@ -41,6 +41,39 @@
       <trans-unit id="start_now" datatype="html">
         <source>Start now</source>
       </trans-unit>
+      <trans-unit id="thermometre.title" datatype="html">
+        <source>Step 1 : Temperature</source>
+      </trans-unit>
+      <trans-unit id="thermometre.subtitle" datatype="html">
+        <source>Let's start by measuring the temperature! Where do you stand in relation to this person?</source>
+      </trans-unit>
+      <trans-unit id="thermometre.hint" datatype="html">
+        <source>Click a row or use Enter/Space to choose. Selected option will show as filled.</source>
+      </trans-unit>
+      <trans-unit id="thermometre.soulmates" datatype="html">
+        <source>Soulmates</source>
+      </trans-unit>
+      <trans-unit id="thermometre.lovers" datatype="html">
+        <source>Lovers</source>
+      </trans-unit>
+      <trans-unit id="thermometre.friends_plus" datatype="html">
+        <source>Friends+</source>
+      </trans-unit>
+      <trans-unit id="thermometre.friends" datatype="html">
+        <source>Friends</source>
+      </trans-unit>
+      <trans-unit id="thermometre.knowledge" datatype="html">
+        <source>Knowledge</source>
+      </trans-unit>
+      <trans-unit id="thermometre.unknown" datatype="html">
+        <source>Unknown</source>
+      </trans-unit>
+      <trans-unit id="thermometre.undesired" datatype="html">
+        <source>Undesired</source>
+      </trans-unit>
+      <trans-unit id="thermometre.enemies" datatype="html">
+        <source>Enemies</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

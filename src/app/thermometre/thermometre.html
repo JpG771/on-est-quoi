@@ -1,0 +1,42 @@
+<div class="thermo-page">
+  <div class="thermo-card">
+    <header class="thermo-header">
+      <h1 i18n="@@thermometre.title">Step 1 : Temperature</h1>
+      <p class="thermo-sub" i18n="@@thermometre.subtitle">Let's start by measuring the temperature! Where do you stand in relation to this person?</p>
+    </header>
+
+    <div class="thermo-body">
+      <div class="rows-container">
+  <div class="thermo-track" aria-hidden="true">
+    <div class="thermo-fill" [style.height.%]="fillPercent" aria-hidden="true"></div>
+  </div>
+
+  <div class="rows">
+    <div
+      *ngFor="let label of descriptions; let i = index"
+      class="row"
+      role="button"
+      tabindex="0"
+      (click)="select(i)"
+      (keydown.enter)="select(i)"
+      (keydown.space)="select(i)"
+      [attr.aria-pressed]="selectedIndex === i"
+      [class.selected]="selectedIndex === i">
+
+      <div class="row-col dot-col">
+        <span class="dot" [class.filled]="isFilled(i)" aria-hidden="true"></span>
+      </div>
+
+      <div class="row-col label-col">
+        <span class="row-label">{{ label }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <footer class="thermo-footer">
+        <p class="hint" i18n="@@thermometre.hint">Click a row or use Enter/Space to choose. Selected option will show as filled.</p>
+      </footer>
+    </div>
+  </div>
+</div>

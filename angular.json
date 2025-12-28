@@ -17,7 +17,20 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "locales": {
+          "en": "src/locale/messages.en.xlf",
+          "fr": "src/locale/messages.fr.xlf"
+        }
+      },
       "architect": {
+        "extract-i18n": {
+          "builder": "@angular/localize:extract-i18n",
+          "options": {
+            "browserTarget": "on-est-quoi:build",
+            "outputPath": "src/locale"
+          }
+        },
         "build": {
           "builder": "@angular/build:application",
           "options": {
@@ -62,7 +75,8 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "localize": ["fr"]
             }
           },
           "defaultConfiguration": "production"

@@ -1,0 +1,240 @@
+.col.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Page & card layout */
+.thermo-page {
+  display: flex;
+  justify-content: center;
+  padding: 2.25rem 1rem;
+  background: linear-gradient(180deg, #fff 0%, #fff 60%);
+}
+
+.thermo-card {
+  width: 100%;
+  max-width: 820px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(17,24,39,0.06);
+  padding: 1.25rem;
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+.thermo-header h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.thermo-sub {
+  margin: 0 0 0.85rem 0;
+  color: #374151;
+  font-size: 0.98rem;
+}
+
+.thermo-body {
+  display: block;
+}
+
+.rows-container {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+
+  /* layout variables so the track can be centered on the left dot column */
+  --dot-col-w: 52px;
+  --row-pad: 0.3rem; /* matches the .row padding-right/left value */
+}
+
+.thermo-footer {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.thermo-footer .hint {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.925rem;
+}
+
+/* vertical track behind rows — centered on the left dot column */
+.rows-container .thermo-track {
+  position: absolute;
+  /* position the center of the track at the center of the dot column */
+  left: calc(var(--row-pad) + (var(--dot-col-w) / 2));
+  top: 10px;
+  bottom: 20px;
+  width: 14px;
+  border-radius: 8px;
+  background: rgba(225,29,72,0.08);
+  box-shadow: inset 0 0 0 1px rgba(226, 232, 240, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rows-container .thermo-track .thermo-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0%;
+  background: linear-gradient(180deg, #991b1b 0%, #7f1d1d 100%); /* darker red fill */
+  border-radius: 8px 8px 0 0;
+  transition: height 320ms cubic-bezier(.2,.8,.2,1);
+  z-index: 0;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 120ms ease;
+  position: relative;
+  min-height: 44px; /* ensures consistent height to align with track */
+  z-index: 2; /* ensure rows render above the thermo fill */
+}
+
+.row:hover {
+  background-color: rgba(225, 29, 72, 0.05);
+  transform: translateY(-2px);
+}
+
+.row.selected {
+  background-color: rgba(225, 29, 72, 0.08);
+}
+
+.row-col {
+  display: flex;
+  align-items: center;
+}
+
+.label-col {
+  flex: 1 1 auto;
+}
+
+.dot-col {
+  width: 52px; /* reserve space on the left for the dot and vertical track */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 52px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #e11d48;
+  background: white;
+  transition: background-color 160ms ease, transform 120ms ease;
+}
+
+/* Make the last dot 50% larger than the others */
+.rows .row:last-child .dot {
+  width: 33px;
+  height: 33px;
+}
+
+.dot.filled {
+  background-color: #e11d48;
+  transform: scale(1.05);
+}
+
+.bulb {
+  position: absolute;
+  /* center bulb under the track (same calculation as the track center) */
+  left: calc(var(--row-pad) + (var(--dot-col-w) / 2) - 18px);
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #e11d48;
+  margin-top: 6px;
+  background: white;
+  z-index: 1;
+}
+
+/* Fill animation for dots */
+@keyframes fillGrow {
+  0% {
+    transform: scale(0.6);
+    box-shadow: 0 0 0 rgba(225, 29, 72, 0);
+  }
+  60% {
+    transform: scale(1.12);
+    box-shadow: 0 6px 18px rgba(225,29,72,0.14);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 6px 18px rgba(225,29,72,0.12);
+  }
+}
+
+.dot.filled {
+  background-color: #e11d48;
+  animation: fillGrow 260ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+/* Right column list */
+.col.right .rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 120ms ease;
+}
+
+.row:hover {
+  background-color: rgba(225, 29, 72, 0.05);
+  transform: translateY(-2px);
+}
+
+.row.selected {
+  background-color: rgba(225, 29, 72, 0.08);
+}
+
+.row-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #e11d48;
+  background: transparent;
+  transition: background-color 200ms ease, transform 120ms ease;
+  flex: 0 0 18px;
+}
+
+.row-circle.filled {
+  background-color: #e11d48;
+}
+
+.row-label {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .row-label {
+    font-size: 0.95rem;
+  }
+}

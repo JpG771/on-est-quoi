@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="fr" target-language="fr" datatype="plaintext" original="ng2.template">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="on_est_quoi" datatype="html">
         <source>What are we?</source>
@@ -91,6 +91,83 @@
         <target>Démarrer maintenant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/accueil/accueil.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.title" datatype="html">
+        <source>Step 1 : Temperature</source>
+        <target>Étape 1 : Température</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.subtitle" datatype="html">
+        <source>Let's start by measuring the temperature! Where do you stand in relation to this person?</source>
+        <target>Commençons par mesurer la température ! Où en êtes-vous par rapport à cette personne?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.hint" datatype="html">
+        <source>Click a row or use Enter/Space to choose. Selected option will show as filled.</source>
+        <target>Cliquez sur une ligne ou utilisez Entrée/Espace pour choisir. L'option sélectionnée apparaîtra remplie.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.soulmates" datatype="html">
+        <source>Soulmates</source>
+        <target>Âmes sœurs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.lovers" datatype="html">
+        <source>Lovers</source>
+        <target>Amoureux</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.friends_plus" datatype="html">
+        <source>Friends+</source>
+        <target>Amis+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.friends" datatype="html">
+        <source>Friends</source>
+        <target>Amis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.knowledge" datatype="html">
+        <source>Knowledge</source>
+        <target>Connaissances</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.unknown" datatype="html">
+        <source>Unknown</source>
+        <target>Inconnus</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.undesired" datatype="html">
+        <source>Undesired</source>
+        <target>Indésirables</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thermometre.enemies" datatype="html">
+        <source>Enemies</source>
+        <target>Ennemis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thermometre/thermometre.ts</context>
         </context-group>
       </trans-unit>
     </body>

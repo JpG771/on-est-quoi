@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Thermometre } from "../thermometre/thermometre";
 
 @Component({
   selector: 'app-questionnaire',
-  imports: [],
+  imports: [Thermometre],
   templateUrl: './questionnaire.html',
   styleUrl: './questionnaire.scss',
 })
