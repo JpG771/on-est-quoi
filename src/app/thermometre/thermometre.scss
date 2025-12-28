@@ -9,13 +9,13 @@
   display: flex;
   justify-content: center;
   padding: 2.25rem 1rem;
-  background: linear-gradient(180deg, #fff 0%, #fff 60%);
+  background: var(--color-white);
 }
 
 .thermo-card {
   width: 100%;
   max-width: 820px;
-  background: #ffffff;
+  background: var(--color-white);
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(17,24,39,0.06);
   padding: 1.25rem;
@@ -25,12 +25,12 @@
 .thermo-header h1 {
   margin: 0 0 0.25rem 0;
   font-size: 1.25rem;
-  color: #111827;
+  color: var(--color-black);
 }
 
 .thermo-sub {
   margin: 0 0 0.85rem 0;
-  color: #374151;
+  color: var(--color-black-light);
   font-size: 0.98rem;
 }
 
@@ -56,7 +56,7 @@
 
 .thermo-footer .hint {
   margin: 0;
-  color: #6b7280;
+  color: var(--color-black-lighter);
   font-size: 0.925rem;
 }
 
@@ -69,7 +69,7 @@
   bottom: 20px;
   width: 14px;
   border-radius: 8px;
-  background: rgba(225,29,72,0.08);
+  background: var(--color-red-light);
   box-shadow: inset 0 0 0 1px rgba(226, 232, 240, 0.4);
   pointer-events: none;
   z-index: 1;
@@ -81,7 +81,7 @@
   right: 0;
   bottom: 0;
   height: 0%;
-  background: linear-gradient(180deg, #991b1b 0%, #7f1d1d 100%); /* darker red fill */
+  background: var(--color-red-dark);
   border-radius: 8px 8px 0 0;
   transition: height 320ms cubic-bezier(.2,.8,.2,1);
   z-index: 0;
@@ -136,7 +136,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 2px solid #e11d48;
+  border: 2px solid var(--color-red);
   background: white;
   transition: background-color 160ms ease, transform 120ms ease;
 }
@@ -148,7 +148,7 @@
 }
 
 .dot.filled {
-  background-color: #e11d48;
+  background-color: var(--color-red);
   transform: scale(1.05);
 }
 
@@ -160,7 +160,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid #e11d48;
+  border: 2px solid var(--color-red);
   margin-top: 6px;
   background: white;
   z-index: 1;
@@ -183,7 +183,7 @@
 }
 
 .dot.filled {
-  background-color: #e11d48;
+  background-color: var(--color-red);
   animation: fillGrow 260ms cubic-bezier(.2,.8,.2,1) both;
 }
 
@@ -217,14 +217,14 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 2px solid #e11d48;
+  border: 2px solid var(--color-red);
   background: transparent;
   transition: background-color 200ms ease, transform 120ms ease;
   flex: 0 0 18px;
 }
 
 .row-circle.filled {
-  background-color: #e11d48;
+  background-color: var(--color-red);
 }
 
 .row-label {

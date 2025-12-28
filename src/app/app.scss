@@ -6,7 +6,7 @@
 
 /* Basic header styles for the site title */
 .site-header {
-	background-color: #e11d48; /* bright, lovely red */
+	background-color: var(--color-red);
 	border-bottom: 1px solid rgba(0,0,0,0.06);
 	box-shadow: 0 1px 0 rgba(0,0,0,0.04);
 	position: sticky;
@@ -44,7 +44,7 @@ main {
 
 .lang-button {
   background-color: rgba(255, 255, 255, 0.15) !important;
-  color: #ffffff !important;
+  color: var(--color-white) !important;
   font-weight: 600;
   font-size: 0.875rem;
   padding: 0.5rem 0.875rem;

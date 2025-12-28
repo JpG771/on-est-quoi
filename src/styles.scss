@@ -16,9 +16,21 @@ html {
     density: 0,
   ));
 
-  --mat-sys-surface: #fee2e2; /* light red/pink background */
-  --mat-button-protected-container-color: #e11d48; /* bright, lovely red */
-  --mat-button-protected-label-text-color: #fff; /* white text for contrast */
+  /* Color Palette */
+  --color-red-light: #fee2e2; /* lovely red */
+  --color-red: #e11d48; /* lovely red */
+  --color-red-dark: #991b1b; /* deep red */
+  --color-green: #51cf66; /* fresh green */
+  --color-yellow: #ffd43b; /* sunny yellow */
+  --color-black-lighter: #6b7280; /* light black */
+  --color-black-light: #374151; /* light black */
+  --color-black: #212529; /* deep black */
+  --color-white: #fff; /* light black */
+
+  /* Light Theme Overrides */
+  --mat-sys-surface: var(--color-red-light);
+  --mat-button-protected-container-color: var(--color-red);
+  --mat-button-protected-label-text-color: var(--color-black-light);
 }
 
 body {
