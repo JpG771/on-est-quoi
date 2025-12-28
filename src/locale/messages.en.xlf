@@ -74,6 +74,24 @@
       <trans-unit id="thermometre.enemies" datatype="html">
         <source>Enemies</source>
       </trans-unit>
+      <trans-unit id="ranking.1" datatype="html">
+        <source>Favorite</source>
+      </trans-unit>
+      <trans-unit id="ranking.2" datatype="html">
+        <source>Love</source>
+      </trans-unit>
+      <trans-unit id="ranking.3" datatype="html">
+        <source>Accepted</source>
+      </trans-unit>
+      <trans-unit id="ranking.4" datatype="html">
+        <source>Rarely</source>
+      </trans-unit>
+      <trans-unit id="ranking.5" datatype="html">
+        <source>Never</source>
+      </trans-unit>
+      <trans-unit id="ranking.unknown" datatype="html">
+        <source>Unknown Ranking</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
