@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { ToDoItem } from '../models/to-do-item';
 
-export type Language = 'fr' | 'en';
-
 @Injectable({
   providedIn: 'root'
 })
-export class I18nService {
+export class ToDoItemService {
   constructor() {
 
   }
