@@ -6,6 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `@switch (id()) {
+    @case (0) {
+      <span i18n="@@ranking.0">Choices</span>
+    }
     @case (1) {
       <span i18n="@@ranking.1">Favorite</span>
     }

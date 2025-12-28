@@ -1,72 +1,27 @@
-<div class="drag-drop-container">
-  <!-- Choices div -->
-  <div class="category-div choices">
-    <header class="category-header">
-      <i class="icon">🔥</i>
-      <h3>Choices</h3>
+<div class="contrat-page">
+  <div class="contrat-card">
+    <header class="contrat-header">
+      <h1 i18n="@@contrat.title">Step 2: Preferences</h1>
+      <p class="contrat-sub" i18n="@@contrat.subtitle">Drag and drop the choices into the categories that best fit your preferences.</p>
     </header>
-    <div class="drop-zone">
-      <!-- List of possible choices -->
-      <div class="choice-item" draggable="true">Choice 1</div>
-      <div class="choice-item" draggable="true">Choice 2</div>
-      <div class="choice-item" draggable="true">Choice 3</div>
-      <div class="choice-item" draggable="true">Choice 4</div>
-      <div class="choice-item" draggable="true">Choice 5</div>
-    </div>
-  </div>
 
-  <!-- Favorite div -->
-  <div class="category-div favorite">
-    <header class="category-header">
-      <i class="icon">⭐</i>
-      <h3>Favorite</h3>
-    </header>
-    <div class="drop-zone">
-      <!-- Drop zone -->
+    <div class="contrat-body">
+      <div class="drag-drop-container">
+        <div *ngFor="let cat of categories" class="category-div {{cat.name}}">
+          <header class="category-header">
+            <i class="icon">{{cat.icon}}</i>
+            <h3><app-ranking-label [id]="cat.id"></app-ranking-label></h3>
+          </header>
+          <div class="drop-zone" (dragover)="onDragOver($event)" (drop)="onDrop($event, cat.name)" (dragenter)="onDragEnter(cat.name)" (dragleave)="onDragLeave()" [class.drag-over]="dragOverCategory === cat.name">
+            <div *ngFor="let item of getItems(cat.name)" class="choice-item" draggable="true" (dragstart)="onDragStart($event, item, cat.name)"><i class="list-icon">🏷️</i> {{ item }}</div>
+            <div *ngIf="!getItems(cat.name).length" class="placeholder">{{cat.placeholder}}</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Love div -->
-  <div class="category-div love">
-    <header class="category-header">
-      <i class="icon">❤️</i>
-      <h3>Love</h3>
-    </header>
-    <div class="drop-zone">
-      <!-- Drop zone -->
-    </div>
-  </div>
-
-  <!-- Like div -->
-  <div class="category-div like">
-    <header class="category-header">
-      <i class="icon">👍</i>
-      <h3>Like</h3>
-    </header>
-    <div class="drop-zone">
-      <!-- Drop zone -->
-    </div>
-  </div>
-
-  <!-- Rarely div -->
-  <div class="category-div rarely">
-    <header class="category-header">
-      <i class="icon">🤔</i>
-      <h3>Rarely</h3>
-    </header>
-    <div class="drop-zone">
-      <!-- Drop zone -->
-    </div>
-  </div>
-
-  <!-- Never div -->
-  <div class="category-div never">
-    <header class="category-header">
-      <i class="icon">🚫</i>
-      <h3>Never</h3>
-    </header>
-    <div class="drop-zone">
-      <!-- Drop zone -->
-    </div>
+    <footer class="contrat-footer">
+      <p class="hint" i18n="@@contrat.hint">Drag items from Choices to the categories. Drop zones highlight when dragging.</p>
+    </footer>
   </div>
 </div>

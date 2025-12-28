@@ -74,6 +74,9 @@
       <trans-unit id="thermometre.enemies" datatype="html">
         <source>Enemies</source>
       </trans-unit>
+      <trans-unit id="ranking.0" datatype="html">
+        <source>Choices</source>
+      </trans-unit>
       <trans-unit id="ranking.1" datatype="html">
         <source>Favorite</source>
       </trans-unit>
@@ -91,6 +94,33 @@
       </trans-unit>
       <trans-unit id="ranking.unknown" datatype="html">
         <source>Unknown Ranking</source>
+      </trans-unit>
+      <trans-unit id="contrat.title" datatype="html">
+        <source>Step 2: Preferences</source>
+      </trans-unit>
+      <trans-unit id="contrat.subtitle" datatype="html">
+        <source>Drag and drop the choices into the categories that best fit your preferences.</source>
+      </trans-unit>
+      <trans-unit id="contrat.hint" datatype="html">
+        <source>Drag items from Choices to the categories. Drop zones highlight when dragging.</source>
+      </trans-unit>
+      <trans-unit id="contrat.choices.placeholder" datatype="html">
+        <source>Return unwanted choices here</source>
+      </trans-unit>
+      <trans-unit id="contrat.favorite.placeholder" datatype="html">
+        <source>Drop a limited number of favorite items here</source>
+      </trans-unit>
+      <trans-unit id="contrat.love.placeholder" datatype="html">
+        <source>Drop what you love here</source>
+      </trans-unit>
+      <trans-unit id="contrat.like.placeholder" datatype="html">
+        <source>Drop like items here</source>
+      </trans-unit>
+      <trans-unit id="contrat.rarely.placeholder" datatype="html">
+        <source>Drop what can be done but rarely here</source>
+      </trans-unit>
+      <trans-unit id="contrat.never.placeholder" datatype="html">
+        <source>Drop thing you never want here</source>
       </trans-unit>
     </body>
   </file>

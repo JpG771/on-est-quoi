@@ -1,12 +1,68 @@
 import { Component } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CommonModule } from '@angular/common';
+import { RankingLabelComponent } from '../labels/ranking-label';
 
 @Component({
   selector: 'app-contrat',
-  imports: [MatExpansionModule],
+  imports: [
+    CommonModule,
+    MatExpansionModule,
+    RankingLabelComponent
+  ],
   templateUrl: './contrat.html',
   styleUrl: './contrat.scss',
 })
 export class Contrat {
+  choices: string[] = ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'];
+  favorite: string[] = [];
+  love: string[] = [];
+  like: string[] = [];
+  rarely: string[] = [];
+  never: string[] = [];
 
+  categories = [
+    { id: 0, name: 'choices', icon: '🔥', placeholder: $localize`:@@contrat.choices.placeholder:Return unwanted choices here` },
+    { id: 1, name: 'favorite', icon: '⭐', placeholder: $localize`:@@contrat.favorite.placeholder:Drop a limited number of favorite items here` },
+    { id: 2, name: 'love', icon: '❤️', placeholder: $localize`:@@contrat.love.placeholder:Drop what you love here` },
+    { id: 3, name: 'like', icon: '👍', placeholder: $localize`:@@contrat.like.placeholder:Drop like items here` },
+    { id: 4, name: 'rarely', icon: '🤔', placeholder: $localize`:@@contrat.rarely.placeholder:Drop what can be done but rarely here` },
+    { id: 5, name: 'never', icon: '🚫', placeholder: $localize`:@@contrat.never.placeholder:Drop thing you never want here` },
+  ];
+
+  dragOverCategory: string | null = null;
+
+  onDragStart(event: DragEvent, item: string, from: string) {
+    event.dataTransfer!.setData('text/plain', JSON.stringify({ item, from }));
+  }
+
+  onDragOver(event: DragEvent) {
+    event.preventDefault();
+  }
+
+  onDragEnter(category: string) {
+    this.dragOverCategory = category;
+  }
+
+  onDragLeave() {
+    this.dragOverCategory = null;
+  }
+
+  onDrop(event: DragEvent, to: string) {
+    event.preventDefault();
+    const data = JSON.parse(event.dataTransfer!.getData('text/plain'));
+    const { item, from } = data;
+
+    // Remove from source
+    (this as any)[from] = (this as any)[from].filter((i: string) => i !== item);
+
+    // Add to target
+    (this as any)[to].push(item);
+
+    this.dragOverCategory = null;
+  }
+
+  getItems(name: string): string[] {
+    return (this as any)[name];
+  }
 }
