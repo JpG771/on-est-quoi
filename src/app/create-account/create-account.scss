@@ -16,7 +16,13 @@
 .create-form h2 { margin: 0 0 1rem 0; }
 .create-form .field { display: block; margin-bottom: 0.75rem; }
 .create-form input { width: 100%; padding: 0.5rem 0.625rem; border: 1px solid #e6e6e6; border-radius: 4px; }
-.create-form .actions { display:flex; justify-content:flex-end; margin-top:1rem; }
+.create-form .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
 
 .strength-wrapper {
   margin: 0.5rem 0 0.75rem 0;

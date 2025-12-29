@@ -32,7 +32,8 @@
     </label>
 
     <div class="actions">
-      <button mat-button type="submit" i18n="@@create" [disabled]="!email.value || !username.value || !password.value || !confirm.value || strengthLevel < 1">Create</button>
+      <button mat-button type="button" i18n="@@cancel" (click)="router.navigate(['/login'])">Cancel</button>
+      <button matButton="filled" type="submit" i18n="@@create" [disabled]="!email.value || !username.value || !password.value || !confirm.value || strengthLevel < 1">Create</button>
     </div>
     <div class="error" [hidden]="!error">{{ error }}</div>
   </form>

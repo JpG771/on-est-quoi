@@ -74,6 +74,9 @@
       <trans-unit id="create" datatype="html">
         <source>Create</source>
       </trans-unit>
+      <trans-unit id="cancel" datatype="html">
+        <source>Cancel</source>
+      </trans-unit>
       <trans-unit id="thermometre.title" datatype="html">
         <source>Step 1 : Temperature</source>
       </trans-unit>
