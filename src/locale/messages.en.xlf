@@ -102,7 +102,7 @@
         <source>Passwords do not match</source>
       </trans-unit>
       <trans-unit id="thermometre.title" datatype="html">
-        <source>Step 1 : Temperature</source>
+        <source>Temperature</source>
       </trans-unit>
       <trans-unit id="thermometre.subtitle" datatype="html">
         <source>Let's start by measuring the temperature! Where do you stand in relation to this person?</source>
@@ -156,7 +156,7 @@
         <source>Unknown Ranking</source>
       </trans-unit>
       <trans-unit id="contrat.title" datatype="html">
-        <source>Step 2: Preferences</source>
+        <source>Preferences</source>
       </trans-unit>
       <trans-unit id="contrat.subtitle" datatype="html">
         <source>Drag and drop the choices into the categories that best fit your preferences.</source>

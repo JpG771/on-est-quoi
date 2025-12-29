@@ -234,8 +234,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="thermometre.title" datatype="html">
-        <source>Step 1 : Temperature</source>
-        <target>Étape 1 : Température</target>
+        <source>Temperature</source>
+        <target>Température</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/thermometre/thermometre.html</context>
         </context-group>
@@ -360,8 +360,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="contrat.title" datatype="html">
-        <source>Step 2: Preferences</source>
-        <target>Étape 2 : Préférences</target>
+        <source>Preferences</source>
+        <target>Préférences</target>
       </trans-unit>
       <trans-unit id="contrat.subtitle" datatype="html">
         <source>Drag and drop the choices into the categories that best fit your preferences.</source>
