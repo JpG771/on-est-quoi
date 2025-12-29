@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { QuestionnaireService } from '../services/questionnaire.service';
 
 @Component({
   selector: 'app-thermometre',
@@ -22,12 +23,21 @@ export class Thermometre {
   // selected index (0 = hottest)
   selected = signal<number | null>(null);
 
+  questionnaire = inject(QuestionnaireService);
+
   constructor() {
+    // initialize selected from shared state if present
+    const idx = this.questionnaire.value.thermometreIndex;
+    if (typeof idx === 'number') {
+      this.selected.set(idx);
+    }
   }
 
   select(i: number) {
     // Always select exactly one item (no multi-select, no toggle off)
     this.selected.set(i);
+    // persist to shared questionnaire state
+    this.questionnaire.setThermometre(i);
   }
 
   isFilled(i: number): boolean {

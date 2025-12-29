@@ -9,7 +9,7 @@
       <form (submit)="$event.preventDefault()">
         <label class="field">
           <span i18n="@@destinataire.email">Email</span><span class="required" aria-hidden="true">*</span>
-          <input #email type="email" placeholder="Email" i18n-placeholder="@@destinataire.email" aria-required="true" (input)="email.value && (this.email = email.value)" />
+          <input #email type="email" placeholder="Email" i18n-placeholder="@@destinataire.email" aria-required="true" (input)="onEmailChange(email.value)" />
           <div class="field-error" i18n="@@invalidEmail" [hidden]="isValidEmail(email?.value)">Invalid email address</div>
         </label>
 

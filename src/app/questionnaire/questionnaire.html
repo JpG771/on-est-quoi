@@ -2,7 +2,7 @@
   <mat-step label="Destinataire">
     <app-destinataire></app-destinataire>
     <div class="step-actions">
-      <button matButton="filled" matStepperNext>Next</button>
+      <button matButton="filled" matStepperNext [disabled]="!(questionnaire.state$ | async)?.destinataireEmail">Next</button>
     </div>
   </mat-step>
   <mat-step label="Thermometre">

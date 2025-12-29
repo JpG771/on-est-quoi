@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import { QuestionnaireService } from '../services/questionnaire.service';
 
 @Component({
   selector: 'app-destinataire',
@@ -10,11 +11,20 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './destinataire.scss'
 })
 export class Destinataire {
-  email = '';
+  questionnaire = inject(QuestionnaireService);
+  email = this.questionnaire.value.destinataireEmail ?? '';
 
   isValidEmail(value: string | null | undefined): boolean {
     if (!value) return false;
-    // simple email regex
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  onEmailChange(value: string) {
+    this.email = value;
+    if (this.isValidEmail(value)) {
+      this.questionnaire.setDestinataire(value);
+    } else {
+      this.questionnaire.setDestinataire(null);
+    }
   }
 }

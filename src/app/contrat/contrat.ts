@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CommonModule } from '@angular/common';
 import { RankingLabelComponent } from '../labels/ranking-label';
+import { QuestionnaireService } from '../services/questionnaire.service';
 
 @Component({
   selector: 'app-contrat',
@@ -14,12 +15,25 @@ import { RankingLabelComponent } from '../labels/ranking-label';
   styleUrl: './contrat.scss',
 })
 export class Contrat {
+  questionnaire = inject(QuestionnaireService);
   choices: string[] = ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'];
   favorite: string[] = [];
   love: string[] = [];
   like: string[] = [];
   rarely: string[] = [];
   never: string[] = [];
+
+  constructor() {
+    const saved = this.questionnaire.value.contrat;
+    if (saved) {
+      this.choices = saved.choices ?? this.choices;
+      this.favorite = saved.favorite ?? this.favorite;
+      this.love = saved.love ?? this.love;
+      this.like = saved.like ?? this.like;
+      this.rarely = saved.rarely ?? this.rarely;
+      this.never = saved.never ?? this.never;
+    }
+  }
 
   categories = [
     { id: 0, name: 'choices', icon: '🔥', placeholder: $localize`:@@contrat.choices.placeholder:Return unwanted choices here` },
@@ -60,6 +74,15 @@ export class Contrat {
     (this as any)[to].push(item);
 
     this.dragOverCategory = null;
+    // persist contrat state to shared service
+    this.questionnaire.setContrat({
+      choices: this.choices,
+      favorite: this.favorite,
+      love: this.love,
+      like: this.like,
+      rarely: this.rarely,
+      never: this.never
+    });
   }
 
   getItems(name: string): string[] {
