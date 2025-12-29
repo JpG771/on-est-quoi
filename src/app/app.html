@@ -13,7 +13,18 @@
         </div>
 
         <div class="login-toggle">
-          <button mat-button (click)="onLogin()" i18n="@@login" class="login-button">Login</button>
+          <ng-container *ngIf="userService.user$ | async as user; else notSignedIn">
+            <button mat-button class="user-button" [matMenuTriggerFor]="userMenu">
+              <img *ngIf="user.photoURL" [src]="user.photoURL" alt="" class="user-avatar" />
+              <span class="user-name">{{ user.displayName || user.email }}</span>
+            </button>
+            <mat-menu #userMenu="matMenu">
+              <button mat-menu-item (click)="onSignOut()" i18n="@@signOut">Sign out</button>
+            </mat-menu>
+          </ng-container>
+          <ng-template #notSignedIn>
+            <button mat-button (click)="onLogin()" i18n="@@login" class="login-button">Login</button>
+          </ng-template>
         </div>
       </div>
     </div>
