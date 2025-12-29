@@ -36,12 +36,12 @@ export class Contrat {
   }
 
   categories = [
-    { id: 0, name: 'choices', icon: '🔥', placeholder: $localize`:@@contrat.choices.placeholder:Return unwanted choices here` },
-    { id: 1, name: 'favorite', icon: '⭐', placeholder: $localize`:@@contrat.favorite.placeholder:Drop a limited number of favorite items here` },
-    { id: 2, name: 'love', icon: '❤️', placeholder: $localize`:@@contrat.love.placeholder:Drop what you love here` },
-    { id: 3, name: 'like', icon: '👍', placeholder: $localize`:@@contrat.like.placeholder:Drop like items here` },
-    { id: 4, name: 'rarely', icon: '🤔', placeholder: $localize`:@@contrat.rarely.placeholder:Drop what can be done but rarely here` },
-    { id: 5, name: 'never', icon: '🚫', placeholder: $localize`:@@contrat.never.placeholder:Drop thing you never want here` },
+    { id: 0, name: 'choices', point: 0, icon: '🔥', placeholder: $localize`:@@contrat.choices.placeholder:Return unwanted choices here` },
+    { id: 1, name: 'favorite', point: 10, icon: '⭐', placeholder: $localize`:@@contrat.favorite.placeholder:Drop a limited number of favorite items here` },
+    { id: 2, name: 'love', point: 5, icon: '❤️', placeholder: $localize`:@@contrat.love.placeholder:Drop what you love here` },
+    { id: 3, name: 'like', point: 3, icon: '👍', placeholder: $localize`:@@contrat.like.placeholder:Drop like items here` },
+    { id: 4, name: 'rarely', point: 1, icon: '🤔', placeholder: $localize`:@@contrat.rarely.placeholder:Drop what can be done but rarely here` },
+    { id: 5, name: 'never', point: -5, icon: '🚫', placeholder: $localize`:@@contrat.never.placeholder:Drop thing you never want here` },
   ];
 
   dragOverCategory: string | null = null;

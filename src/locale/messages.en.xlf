@@ -188,6 +188,21 @@
       <trans-unit id="contrat.never.placeholder" datatype="html">
         <source>Drop thing you never want here</source>
       </trans-unit>
+      <trans-unit id="summary.title" datatype="html">
+        <source>Thank you</source>
+      </trans-unit>
+      <trans-unit id="summary.resultFor" datatype="html">
+        <source>Result for</source>
+      </trans-unit>
+      <trans-unit id="summary.scoreLabel" datatype="html">
+        <source>Score</source>
+      </trans-unit>
+      <trans-unit id="summary.breakdown" datatype="html">
+        <source>Breakdown</source>
+      </trans-unit>
+      <trans-unit id="summary.finish" datatype="html">
+        <source>Finish</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

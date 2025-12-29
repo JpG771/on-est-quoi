@@ -409,6 +409,41 @@
         <source>Drop thing you never want here</source>
         <target>Déposez les choses que vous ne voulez jamais ici</target>
       </trans-unit>
+      <trans-unit id="summary.title" datatype="html">
+        <source>Thank you</source>
+        <target>Merci</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="summary.resultFor" datatype="html">
+        <source>Result for</source>
+        <target>Résultat pour</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="summary.scoreLabel" datatype="html">
+        <source>Score</source>
+        <target>Score</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="summary.breakdown" datatype="html">
+        <source>Breakdown</source>
+        <target>Détail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="summary.finish" datatype="html">
+        <source>Finish</source>
+        <target>Terminer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/questionnaire/questionnaire.html</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

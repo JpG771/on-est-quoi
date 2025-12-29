@@ -1,0 +1,28 @@
+<div class="summary-page">
+  <div class="summary-card">
+    <div class="summary-header">
+      <h1 i18n="@@summary.title">Thank you</h1>
+      <div class="summary-sub"><span i18n="@@summary.resultFor">Result for</span>&nbsp;<strong>{{ destinataire || '—' }}</strong></div>
+    </div>
+
+    <div class="summary-body">
+      <div class="score">
+        <div class="score-label" i18n="@@summary.scoreLabel">Score</div>
+        <div class="score-value" [ngClass]="scoreClass">{{ totalScore }}</div>
+      </div>
+
+      <div class="breakdown">
+        <h3 i18n="@@summary.breakdown">Breakdown</h3>
+        <ul>
+          <li>Thermometre: {{ thermoScore }}</li>
+          <li>Choices: {{ contrat.choices.length }} × {{ 0 }} = {{ contrat.choices.length * 0 }}</li>
+          <li>Favorite: {{ contrat.favorite.length }} × {{ 10 }} = {{ contrat.favorite.length * 10 }}</li>
+          <li>Love: {{ contrat.love.length }} × {{ 5 }} = {{ contrat.love.length * 5 }}</li>
+          <li>Like: {{ contrat.like.length }} × {{ 3 }} = {{ contrat.like.length * 3 }}</li>
+          <li>Rarely: {{ contrat.rarely.length }} × {{ 1 }} = {{ contrat.rarely.length * 1 }}</li>
+          <li>Never: {{ contrat.never.length }} × {{ -5 }} = {{ contrat.never.length * -5 }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

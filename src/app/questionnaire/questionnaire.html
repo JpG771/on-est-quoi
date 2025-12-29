@@ -8,6 +8,7 @@
   <mat-step label="Thermometre">
     <app-thermometre></app-thermometre>
     <div class="step-actions">
+      <button mat-button matStepperPrevious i18n="@@questionnaire.previous">Previous</button>
       <button matButton="filled" matStepperNext i18n="@@questionnaire.next">Next</button>
     </div>
   </mat-step>
@@ -15,6 +16,14 @@
     <app-contrat></app-contrat>
     <div class="step-actions">
       <button mat-button matStepperPrevious i18n="@@questionnaire.previous">Previous</button>
+      <button matButton="filled" matStepperNext i18n="@@questionnaire.next">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Summary">
+    <app-summary></app-summary>
+    <div class="step-actions">
+      <button mat-button matStepperPrevious i18n="@@questionnaire.previous">Previous</button>
+      <button matButton="filled" [routerLink]="['/']" i18n="@@summary.finish">Finish</button>
     </div>
   </mat-step>
 </mat-stepper>
