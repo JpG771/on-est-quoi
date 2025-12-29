@@ -62,6 +62,18 @@
       <trans-unit id="createAccountTitle" datatype="html">
         <source>Create account</source>
       </trans-unit>
+      <trans-unit id="destinataire.title" datatype="html">
+        <source>Select the other person</source>
+      </trans-unit>
+      <trans-unit id="destinataire.subtitle" datatype="html">
+        <source>Enter the email address of the person you want to evaluate with.</source>
+      </trans-unit>
+      <trans-unit id="destinataire.email" datatype="html">
+        <source>Email</source>
+      </trans-unit>
+      <trans-unit id="destinataire.hint" datatype="html">
+        <source>We'll only use this to identify the other person for the questionnaire.</source>
+      </trans-unit>
       <trans-unit id="confirmPassword" datatype="html">
         <source>Confirm password</source>
       </trans-unit>

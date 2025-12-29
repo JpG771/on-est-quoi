@@ -1,0 +1,22 @@
+<div class="destinataire-page">
+  <div class="destinataire-card">
+    <div class="destinataire-header">
+      <h1 i18n="@@destinataire.title">Select the other person</h1>
+      <div class="destinataire-sub" i18n="@@destinataire.subtitle">Enter the email address of the person you want to evaluate with.</div>
+    </div>
+
+    <div class="destinataire-body">
+      <form (submit)="$event.preventDefault()">
+        <label class="field">
+          <span i18n="@@destinataire.email">Email</span><span class="required" aria-hidden="true">*</span>
+          <input #email type="email" placeholder="Email" i18n-placeholder="@@destinataire.email" aria-required="true" (input)="email.value && (this.email = email.value)" />
+          <div class="field-error" i18n="@@invalidEmail" [hidden]="isValidEmail(email?.value)">Invalid email address</div>
+        </label>
+
+        <div class="destinataire-footer">
+          <div class="hint" i18n="@@destinataire.hint">We'll only use this to identify the other person for the questionnaire.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

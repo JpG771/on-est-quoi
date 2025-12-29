@@ -142,6 +142,34 @@
           <context context-type="sourcefile">src/app/create-account/create-account.html</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="destinataire.title" datatype="html">
+        <source>Select the other person</source>
+        <target>Sélectionnez l'autre personne</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/destinataire/destinataire.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="destinataire.subtitle" datatype="html">
+        <source>Enter the email address of the person you want to evaluate with.</source>
+        <target>Entrez l'adresse e-mail de la personne avec qui vous souhaitez répondre au questionnaire.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/destinataire/destinataire.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="destinataire.email" datatype="html">
+        <source>Email</source>
+        <target>Courriel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/destinataire/destinataire.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="destinataire.hint" datatype="html">
+        <source>We'll only use this to identify the other person for the questionnaire.</source>
+        <target>Nous n'utiliserons cela que pour identifier l'autre personne pour le questionnaire.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/destinataire/destinataire.html</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="confirmPassword" datatype="html">
         <source>Confirm password</source>
         <target>Confirmer le mot de passe</target>
