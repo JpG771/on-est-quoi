@@ -77,6 +77,12 @@
       <trans-unit id="confirmPassword" datatype="html">
         <source>Confirm password</source>
       </trans-unit>
+        <trans-unit id="questionnaire.next" datatype="html">
+          <source>Next</source>
+        </trans-unit>
+        <trans-unit id="questionnaire.previous" datatype="html">
+          <source>Previous</source>
+        </trans-unit>
       <trans-unit id="passwordStrengthHint" datatype="html">
         <source>Use at least 8 characters including uppercase, lowercase, numbers and symbols to make a stronger password.</source>
       </trans-unit>

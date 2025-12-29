@@ -163,6 +163,20 @@
           <context context-type="sourcefile">src/app/destinataire/destinataire.html</context>
         </context-group>
       </trans-unit>
+        <trans-unit id="questionnaire.next" datatype="html">
+          <source>Next</source>
+          <target>Suivant</target>
+          <context-group purpose="location">
+            <context context-type="sourcefile">src/app/questionnaire/questionnaire.html</context>
+          </context-group>
+        </trans-unit>
+        <trans-unit id="questionnaire.previous" datatype="html">
+          <source>Previous</source>
+          <target>Précédent</target>
+          <context-group purpose="location">
+            <context context-type="sourcefile">src/app/questionnaire/questionnaire.html</context>
+          </context-group>
+        </trans-unit>
       <trans-unit id="destinataire.hint" datatype="html">
         <source>We'll only use this to identify the other person for the questionnaire.</source>
         <target>Nous n'utiliserons cela que pour identifier l'autre personne pour le questionnaire.</target>

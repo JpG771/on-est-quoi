@@ -2,19 +2,19 @@
   <mat-step label="Destinataire">
     <app-destinataire></app-destinataire>
     <div class="step-actions">
-      <button matButton="filled" matStepperNext [disabled]="!(questionnaire.state$ | async)?.destinataireEmail">Next</button>
+      <button matButton="filled" matStepperNext i18n="@@questionnaire.next" [disabled]="!(questionnaire.state$ | async)?.destinataireEmail">Next</button>
     </div>
   </mat-step>
   <mat-step label="Thermometre">
     <app-thermometre></app-thermometre>
     <div class="step-actions">
-      <button matButton="filled" matStepperNext>Next</button>
+      <button matButton="filled" matStepperNext i18n="@@questionnaire.next">Next</button>
     </div>
   </mat-step>
   <mat-step label="Contrat">
     <app-contrat></app-contrat>
     <div class="step-actions">
-      <button mat-button matStepperPrevious>Previous</button>
+      <button mat-button matStepperPrevious i18n="@@questionnaire.previous">Previous</button>
     </div>
   </mat-step>
 </mat-stepper>
