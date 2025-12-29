@@ -80,6 +80,9 @@
       <trans-unit id="signInWithGoogle" datatype="html">
         <source>Sign in with Google</source>
       </trans-unit>
+      <trans-unit id="signOut" datatype="html">
+        <source>Sign out</source>
+      </trans-unit>
       <trans-unit id="invalidEmail" datatype="html">
         <source>Invalid email address</source>
       </trans-unit>
