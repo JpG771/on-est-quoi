@@ -47,6 +47,9 @@
       <trans-unit id="loginTitle" datatype="html">
         <source>Login</source>
       </trans-unit>
+      <trans-unit id="email" datatype="html">
+        <source>Email</source>
+      </trans-unit>
       <trans-unit id="username" datatype="html">
         <source>Username</source>
       </trans-unit>

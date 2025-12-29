@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-create-account',
@@ -8,18 +10,26 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './create-account.scss'
 })
 export class CreateAccount {
+  userService = inject(UserService);
+  router = inject(Router);
   error = '';
   strengthLevel = 0;
   strengthPercent = 0;
   strengthLabel = '';
 
-  onCreate(username: string, password: string, confirm: string): void {
+  async onCreate(username: string, email: string, password: string, confirm: string): Promise<void> {
     if (password !== confirm) {
       this.error = 'Passwords do not match';
       return;
     }
     this.error = '';
-    console.log('Create account for', username);
+    try {
+      await this.userService.createAccount(email, password, username);
+      // Navigate to login page on success
+      this.router.navigate(['/login']);
+    } catch (err: any) {
+      this.error = err?.message || String(err);
+    }
   }
 
   updateStrength(password: string): void {

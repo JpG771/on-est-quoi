@@ -11,6 +11,16 @@ import { firebaseConfig } from "./firebase.secret";
 export const firebase: any = {};
 
 firebase.app = initializeApp(firebaseConfig);
-firebase.analytics = getAnalytics(firebase.app);
+// Initialize Analytics only when running in a browser environment
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+	try {
+		firebase.analytics = getAnalytics(firebase.app);
+	} catch (err) {
+		// Analytics not supported in this environment (e.g., SSR or unsupported browser)
+		firebase.analytics = null;
+	}
+} else {
+	firebase.analytics = null;
+}
 // Initialize Firebase Authentication and get a reference to the service
 firebase.auth = getAuth(firebase.app);

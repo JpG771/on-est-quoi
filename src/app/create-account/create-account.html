@@ -1,6 +1,11 @@
 <div class="create-account-page">
-  <form class="create-form" (submit)="$event.preventDefault(); onCreate(username.value, password.value, confirm.value)">
+  <form class="create-form" (submit)="$event.preventDefault(); onCreate(username.value, email.value, password.value, confirm.value)">
     <h2 i18n="@@createAccountTitle">Create account</h2>
+
+    <label class="field">
+      <span i18n="@@email">Email</span><span class="required" aria-hidden="true">*</span>
+      <input #email type="email" placeholder="Email" aria-required="true" />
+    </label>
 
     <label class="field">
       <span i18n="@@username">Username</span><span class="required" aria-hidden="true">*</span>
@@ -27,7 +32,7 @@
     </label>
 
     <div class="actions">
-      <button mat-button type="submit" i18n="@@create" [disabled]="!username.value || !password.value || !confirm.value || strengthLevel < 1">Create</button>
+      <button mat-button type="submit" i18n="@@create" [disabled]="!email.value || !username.value || !password.value || !confirm.value || strengthLevel < 1">Create</button>
     </div>
     <div class="error" [hidden]="!error">{{ error }}</div>
   </form>
