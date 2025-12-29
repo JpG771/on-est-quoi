@@ -1,0 +1,34 @@
+<div class="create-account-page">
+  <form class="create-form" (submit)="$event.preventDefault(); onCreate(username.value, password.value, confirm.value)">
+    <h2 i18n="@@createAccountTitle">Create account</h2>
+
+    <label class="field">
+      <span i18n="@@username">Username</span><span class="required" aria-hidden="true">*</span>
+      <input #username type="text" placeholder="Username" aria-required="true" />
+    </label>
+
+    <label class="field">
+      <span i18n="@@password">Password</span><span class="required" aria-hidden="true">*</span>
+      <input #password type="password" placeholder="Password" (input)="updateStrength(password.value)" aria-required="true" />
+    </label>
+
+    <div class="strength-wrapper" aria-hidden="false">
+      <div class="strength-track" aria-hidden="true">
+        <div class="strength-fill" [class.level-0]="strengthLevel===0" [class.level-1]="strengthLevel===1" [class.level-2]="strengthLevel===2" [class.level-3]="strengthLevel===3" [style.width.%]="strengthPercent" role="progressbar" [attr.aria-valuenow]="strengthPercent" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="strength-label">{{ strengthLabel }}</div>
+
+      <div class="strength-hint" i18n="@@passwordStrengthHint">Use at least 8 characters including uppercase, lowercase, numbers and symbols to make a stronger password.</div>
+    </div>
+
+    <label class="field">
+      <span i18n="@@confirmPassword">Confirm password</span><span class="required" aria-hidden="true">*</span>
+      <input #confirm type="password" placeholder="Confirm password" aria-required="true" />
+    </label>
+
+    <div class="actions">
+      <button mat-button type="submit" i18n="@@create" [disabled]="!username.value || !password.value || !confirm.value || strengthLevel < 1">Create</button>
+    </div>
+    <div class="error" [hidden]="!error">{{ error }}</div>
+  </form>
+</div>

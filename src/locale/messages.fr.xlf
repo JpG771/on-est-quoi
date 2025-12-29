@@ -93,6 +93,76 @@
           <context context-type="sourcefile">src/app/accueil/accueil.html</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="login" datatype="html">
+        <source>Login</source>
+        <target>Connexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginTitle" datatype="html">
+        <source>Login</source>
+        <target>Connexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="username" datatype="html">
+        <source>Username</source>
+        <target>Nom d'utilisateur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password" datatype="html">
+        <source>Password</source>
+        <target>Mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="createAccount" datatype="html">
+        <source>Create an account</source>
+        <target>Créer un compte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="createAccountTitle" datatype="html">
+        <source>Create account</source>
+        <target>Créer un compte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-account/create-account.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="confirmPassword" datatype="html">
+        <source>Confirm password</source>
+        <target>Confirmer le mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-account/create-account.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordStrengthHint" datatype="html">
+        <source>Use at least 8 characters including uppercase, lowercase, numbers and symbols to make a stronger password.</source>
+        <target>Utilisez au moins 8 caractères incluant majuscules, minuscules, chiffres et symboles pour un mot de passe plus sûr.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-account/create-account.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="signIn" datatype="html">
+        <source>Sign in</source>
+        <target>Se connecter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create" datatype="html">
+        <source>Create</source>
+        <target>Créer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-account/create-account.html</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="thermometre.title" datatype="html">
         <source>Step 1 : Temperature</source>
         <target>Étape 1 : Température</target>

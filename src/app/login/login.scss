@@ -1,0 +1,43 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.login-form h2 {
+  margin: 0 0 1rem 0;
+}
+
+.login-form .field {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.login-form .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* required field asterisk */
+.required {
+  color: #b00020;
+  margin-left: 0.25rem;
+  font-weight: 600;
+}

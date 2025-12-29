@@ -1,12 +1,23 @@
 <header class="site-header">
-	<div class="container">
-    <a href="/"><h1 i18n="@@on_est_quoi">What are we?</h1></a>
-    <div class="language-toggle">
-      <button mat-button (click)="toggleLanguage()" class="lang-button">
-        {{ i18n.getCurrentLanguage() === 'fr' ? 'EN' : 'FR' }}
-      </button>
+  <div class="container">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="/"><h1 i18n="@@on_est_quoi">What are we?</h1></a>
+      </div>
+
+      <div class="header-actions">
+        <div class="language-toggle">
+          <button mat-button (click)="toggleLanguage()" class="lang-button">
+            {{ i18n.getCurrentLanguage() === 'fr' ? 'EN' : 'FR' }}
+          </button>
+        </div>
+
+        <div class="login-toggle">
+          <button mat-button (click)="onLogin()" i18n="@@login" class="login-button">Login</button>
+        </div>
+      </div>
     </div>
-	</div>
+  </div>
 </header>
 
 <main>

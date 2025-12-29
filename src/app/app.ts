@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router } from '@angular/router';
 import { I18nService } from './services/i18n.service';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -11,9 +11,14 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class App {
   i18n = inject(I18nService);
+  router = inject(Router);
 
   toggleLanguage(): void {
     const currentLang = this.i18n.getCurrentLanguage();
     this.i18n.setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+  }
+
+  onLogin(): void {
+    this.router.navigate(['/login']);
   }
 }

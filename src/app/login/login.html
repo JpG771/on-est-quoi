@@ -1,0 +1,23 @@
+<div class="login-page">
+  <form class="login-form" (submit)="$event.preventDefault(); onSubmit(username.value, password.value)">
+    <h2 i18n="@@loginTitle">Login</h2>
+
+    <label class="field">
+      <span i18n="@@username">Username</span><span class="required" aria-hidden="true">*</span>
+      <input #username type="text" placeholder="Username" aria-required="true" />
+    </label>
+
+    <label class="field">
+      <span i18n="@@password">Password</span><span class="required" aria-hidden="true">*</span>
+      <input #password type="password" placeholder="Password" aria-required="true" />
+    </label>
+
+    <div class="actions">
+      <button mat-button type="submit" i18n="@@signIn">Sign in</button>
+    </div>
+
+    <div class="create-account">
+      <a routerLink="/create-account" i18n="@@createAccount">Create an account</a>
+    </div>
+  </form>
+</div>
