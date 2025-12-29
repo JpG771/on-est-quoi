@@ -80,6 +80,9 @@
       <trans-unit id="invalidEmail" datatype="html">
         <source>Invalid email address</source>
       </trans-unit>
+      <trans-unit id="passwordMismatch" datatype="html">
+        <source>Passwords do not match</source>
+      </trans-unit>
       <trans-unit id="thermometre.title" datatype="html">
         <source>Step 1 : Temperature</source>
       </trans-unit>

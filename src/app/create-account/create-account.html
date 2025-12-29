@@ -30,6 +30,7 @@
     <label class="field">
       <span i18n="@@confirmPassword">Confirm password</span><span class="required" aria-hidden="true">*</span>
       <input #confirm type="password" placeholder="Confirm password" aria-required="true" (input)="onFieldChange(email.value, username.value, password.value, confirm.value)" />
+      <div class="field-error" i18n="@@passwordMismatch" [hidden]="!(passwordValue && confirmValue && passwordValue !== confirmValue)">Passwords do not match</div>
     </label>
 
     <div class="actions">
