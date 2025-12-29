@@ -31,9 +31,46 @@
 
 .login-form .actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 1rem;
 }
+
+.login-form .actions .google {
+  margin-left: 0.5rem;
+  background-color: #4285F4;
+  color: white;
+}
+
+.divider {
+  margin-top: 1rem;
+}
+
+.google-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.google-row .google {
+  background-color: #4285F4;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.google-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  flex: 0 0 18px;
+  object-fit: contain;
+}
+
+.google-label { line-height: 1; }
 
 /* required field asterisk */
 .required {

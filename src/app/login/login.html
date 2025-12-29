@@ -13,11 +13,19 @@
     </label>
 
     <div class="actions">
-      <button mat-button type="submit" i18n="@@signIn">Sign in</button>
+      <button mat-button type="button" class="create-account-btn" [routerLink]="'/create-account'" i18n="@@createAccount">Create an account</button>
+      <button matButton="filled" type="submit" i18n="@@signIn">Sign in</button>
     </div>
 
-    <div class="create-account">
-      <a routerLink="/create-account" i18n="@@createAccount">Create an account</a>
+    <div class="error" [hidden]="!error">{{ error }}</div>
+
+    <mat-divider class="divider"></mat-divider>
+
+    <div class="google-row">
+      <button mat-button type="button" class="google" (click)="onGoogleSignIn()" i18n="@@signInWithGoogle">
+        <img class="google-icon" src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png" width="18" height="18" alt="" />
+        <span class="google-label">Sign in with Google</span>
+      </button>
     </div>
   </form>
 </div>
