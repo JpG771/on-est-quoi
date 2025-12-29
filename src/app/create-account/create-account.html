@@ -4,17 +4,18 @@
 
     <label class="field">
       <span i18n="@@email">Email</span><span class="required" aria-hidden="true">*</span>
-      <input #email type="email" placeholder="Email" aria-required="true" (input)="updateDisabled()" />
+      <input #email type="email" placeholder="Email" aria-required="true" (input)="onEmailChange(email.value); onFieldChange(email.value, username.value, password.value, confirm.value)" />
+      <div class="field-error" i18n="@@invalidEmail" [hidden]="!emailInvalid">Invalid email address</div>
     </label>
 
     <label class="field">
       <span i18n="@@username">Username</span><span class="required" aria-hidden="true">*</span>
-      <input #username type="text" placeholder="Username" aria-required="true" (input)="updateDisabled()" />
+      <input #username type="text" placeholder="Username" aria-required="true" (input)="onFieldChange(email.value, username.value, password.value, confirm.value)" />
     </label>
 
     <label class="field">
       <span i18n="@@password">Password</span><span class="required" aria-hidden="true">*</span>
-      <input #password type="password" placeholder="Password" (input)="updateStrength(password.value)" aria-required="true" />
+      <input #password type="password" placeholder="Password" aria-required="true" (input)="onFieldChange(email.value, username.value, password.value, confirm.value); updateStrength(password.value)" />
     </label>
 
     <div class="strength-wrapper" aria-hidden="false">
@@ -28,12 +29,12 @@
 
     <label class="field">
       <span i18n="@@confirmPassword">Confirm password</span><span class="required" aria-hidden="true">*</span>
-      <input #confirm type="password" placeholder="Confirm password" aria-required="true" (input)="updateDisabled()" />
+      <input #confirm type="password" placeholder="Confirm password" aria-required="true" (input)="onFieldChange(email.value, username.value, password.value, confirm.value)" />
     </label>
 
     <div class="actions">
       <button mat-button type="button" i18n="@@cancel" (click)="router.navigate(['/login'])">Cancel</button>
-      <button matButton="filled" type="submit" i18n="@@create" [disabled]="!email.value || !username.value || !password.value || !confirm.value || strengthLevel < 1">Create</button>
+      <button matButton="filled" type="submit" i18n="@@create" [disabled]="!isCreateEnabled()">Create</button>
     </div>
     <div class="error" [hidden]="!error">{{ error }}</div>
   </form>

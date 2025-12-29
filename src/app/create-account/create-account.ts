@@ -17,6 +17,11 @@ export class CreateAccount {
   strengthLevel = 0;
   strengthPercent = 0;
   strengthLabel = '';
+  emailValue = '';
+  usernameValue = '';
+  passwordValue = '';
+  confirmValue = '';
+  emailInvalid = false;
 
   async onCreate(username: string, email: string, password: string, confirm: string): Promise<void> {
     if (password !== confirm) {
@@ -55,6 +60,32 @@ export class CreateAccount {
 
   updateDisabled(): void {
     this.changeRef.detectChanges();
+  }
+
+  onFieldChange(email: string, username: string, password: string, confirm: string): void {
+    this.emailValue = (email || '').trim();
+    this.usernameValue = (username || '').trim();
+    this.passwordValue = password || '';
+    this.confirmValue = confirm || '';
+    // ensure strength is recalculated when password changes
+    this.updateStrength(this.passwordValue);
+    this.changeRef.detectChanges();
+  }
+
+  isCreateEnabled(): boolean {
+    return !!this.emailValue && !this.emailInvalid && !!this.usernameValue && !!this.passwordValue && !!this.confirmValue && this.passwordValue === this.confirmValue && this.strengthLevel >= 1;
+  }
+
+  onEmailChange(email: string): void {
+    this.emailValue = (email || '').trim();
+    this.emailInvalid = !this.validateEmail(this.emailValue);
+    this.changeRef.detectChanges();
+  }
+
+  private validateEmail(email: string): boolean {
+    if (!email) return false;
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
   }
 
   private calculateScore(pw: string): number {

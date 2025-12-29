@@ -177,6 +177,13 @@
           <context context-type="sourcefile">src/app/create-account/create-account.html</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="invalidEmail" datatype="html">
+        <source>Invalid email address</source>
+        <target>Adresse e-mail invalide</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-account/create-account.html</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="thermometre.title" datatype="html">
         <source>Step 1 : Temperature</source>
         <target>Étape 1 : Température</target>
