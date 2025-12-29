@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
@@ -12,6 +12,7 @@ import { UserService } from '../services/user.service';
 export class CreateAccount {
   userService = inject(UserService);
   router = inject(Router);
+  changeRef = inject(ChangeDetectorRef);
   error = '';
   strengthLevel = 0;
   strengthPercent = 0;
@@ -49,6 +50,11 @@ export class CreateAccount {
       this.strengthLevel = 3;
       this.strengthLabel = 'Strong';
     }
+    this.changeRef.detectChanges();
+  }
+
+  updateDisabled(): void {
+    this.changeRef.detectChanges();
   }
 
   private calculateScore(pw: string): number {

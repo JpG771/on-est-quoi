@@ -4,12 +4,12 @@
 
     <label class="field">
       <span i18n="@@email">Email</span><span class="required" aria-hidden="true">*</span>
-      <input #email type="email" placeholder="Email" aria-required="true" />
+      <input #email type="email" placeholder="Email" aria-required="true" (input)="updateDisabled()" />
     </label>
 
     <label class="field">
       <span i18n="@@username">Username</span><span class="required" aria-hidden="true">*</span>
-      <input #username type="text" placeholder="Username" aria-required="true" />
+      <input #username type="text" placeholder="Username" aria-required="true" (input)="updateDisabled()" />
     </label>
 
     <label class="field">
@@ -28,7 +28,7 @@
 
     <label class="field">
       <span i18n="@@confirmPassword">Confirm password</span><span class="required" aria-hidden="true">*</span>
-      <input #confirm type="password" placeholder="Confirm password" aria-required="true" />
+      <input #confirm type="password" placeholder="Confirm password" aria-required="true" (input)="updateDisabled()" />
     </label>
 
     <div class="actions">
